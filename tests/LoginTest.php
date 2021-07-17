@@ -34,13 +34,15 @@ class LoginTest extends TestCase
             ->seeInField('email', 'john@Doe.com');
     }
 
-    //public function testRedirectIfLoggedIn()
-    //{
-    //    Auth::loginUsingId(1);
-    //
-    //    $this->visit(route('backend.login'))
-    //        ->seePageIs(route('backend.dashboard'));
-    //}
+//    public function testRedirectIfLoggedIn()
+//    {
+//
+//        User::factory()->create(['email' => 'admin@example.com']);
+//        Auth::loginUsingId(1);
+//
+//        $this->visit(route('backend.login'))
+//            ->seePageIs(route('backend.dashboard'));
+//    }
 
     public function testRedirectIfNotLoggedIn()
     {
@@ -50,6 +52,8 @@ class LoginTest extends TestCase
 
     public function testCanLogout()
     {
+
+        User::factory()->create(['email' => 'admin@example.com']);
         Auth::loginUsingId(1);
 
         $this->visit(route('backend.dashboard'))

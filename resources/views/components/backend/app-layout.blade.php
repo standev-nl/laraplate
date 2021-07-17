@@ -34,13 +34,13 @@
 
 <div class="flex h-full">
     <!-- Sidebar starts -->
-{{--    @include('backend.partials.flash-message')--}}
+    {{--    @include('backend.partials.flash-message')--}}
     @include('laraplate::backend.partials.sidenav')
 
     <div class="w-full">
         <!-- Navigation starts -->
         <nav
-            class="h-16 flex items-center lg:items-stretch justify-end lg:justify-between shadow bg-white dark:bg-gray-900 relative z-10 border-b border-gray-300 dark:border-gray-700">
+                class="h-16 flex items-center lg:items-stretch justify-end lg:justify-between shadow bg-white dark:bg-gray-900 relative z-10 border-b border-gray-300 dark:border-gray-700">
             <div class="hidden lg:flex w-full pr-6">
                 <div class="w-1/2 h-full hidden lg:flex items-center pl-6 pr-24">
                     <div class="relative w-full"></div>
@@ -49,11 +49,11 @@
                     <div class="w-full flex items-center pl-8 justify-end">
 
                         <div
-                            class="h-full flex items-center justify-center border-r mr-2 ml-2 border-gray-200 dark:border-gray-800">
+                                class="h-full flex items-center justify-center border-r mr-2 ml-2 border-gray-200 dark:border-gray-800">
 {{--                            <x-laraplate::dropdown align="right" width="48">--}}
 {{--                                <x-slot name="trigger">--}}
 {{--                                    <button--}}
-{{--                                        class="flex items-center text-sm font-medium mr-5 text-gray-900 dark:text-gray-200 focus:outline-none focus:text-gray-900 dark:focus:text-gray-200 transition duration-150 ease-in-out">--}}
+{{--                                            class="flex items-center text-sm font-medium mr-5 text-gray-900 dark:text-gray-200 focus:outline-none focus:text-gray-900 dark:focus:text-gray-200 transition duration-150 ease-in-out">--}}
 {{--                                        {{ config()->get('language')[app()->getLocale()] }}--}}
 {{--                                        <div class="ml-2">--}}
 {{--                                            <i class="far fa-angle-down"></i>--}}
@@ -71,17 +71,17 @@
                         </div>
 
                         <div
-                            class="h-full flex items-center justify-center mr-2 ml-2 border-gray-200 dark:border-gray-800">
+                                class="h-full flex items-center justify-center mr-2 ml-2 border-gray-200 dark:border-gray-800">
                             <x-laraplate::dropdown align="right" width="48">
                                 <x-slot name="trigger">
                                     <button
-                                        class="flex items-center text-sm font-medium mr-5 text-gray-900 dark:text-gray-200 focus:outline-none focus:text-gray-900 dark:focus:text-gray-200 transition duration-150 ease-in-out">
+                                            class="flex items-center text-sm font-medium mr-5 text-gray-900 dark:text-gray-200 focus:outline-none focus:text-gray-900 dark:focus:text-gray-200 transition duration-150 ease-in-out">
                                         <div class="relative">
                                             <img class="rounded-full h-10 w-10 object-cover"
                                                  src="https://ui-avatars.com/api/?name={{ auth()->user()->firstname }}&color=7F9CF5&background=EBF4FF"
                                                  alt="avatar"/>
                                             <div
-                                                class="w-2 h-2 rounded-full bg-green-400 border border-white absolute inset-0 mb-0 mr-0 m-auto"></div>
+                                                    class="w-2 h-2 rounded-full bg-green-400 border border-white absolute inset-0 mb-0 mr-0 m-auto"></div>
                                         </div>
                                         <div class="ml-4">
                                             {{ auth()->user()->firstname }} {{ auth()->user()->lastname }}
@@ -94,8 +94,9 @@
                                 <x-slot name="content">
                                     <form method="POST" action="{{ route('backend.logout') }}">
                                         @csrf
+                                        {{--@TODO: Dropdown link fixen (button)--}}
                                         <x-laraplate::dropdown-link :href="route('backend.logout')"
-                                                         onclick="event.preventDefault();
+                                                                    onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                             <i class="far fa-sign-out text-red-400 mr-1"></i> {{ __('Logout') }}
                                         </x-laraplate::dropdown-link>
@@ -159,6 +160,7 @@
         Alert.style.transform = "translateY(50%)";
 
     }, 1000);
+
     function closeAlert() {
         Alert.style.transform = "translateY(-200%)";
     }
