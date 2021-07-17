@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="24" errors="1" warnings="0" failures="0" skipped="0" time="0.238171">
+    <testsuite name="Laravel Boilerplate Test Suite" tests="5" assertions="24" errors="1" warnings="0" failures="0" skipped="0" time="0.238171">
+      <testsuite name="StanDev\Laraplate\Tests\LoginTest" file="/home/stanmenten/development/playground/laraplate/tests/LoginTest.php" tests="4" assertions="20" errors="1" warnings="0" failures="0" skipped="0" time="0.221256">
+        <testcase name="testSuccessfulLoginWithDefaultCredentials" class="StanDev\Laraplate\Tests\LoginTest" classname="StanDev.Laraplate.Tests.LoginTest" file="/home/stanmenten/development/playground/laraplate/tests/LoginTest.php" line="13" assertions="5" time="0.192490"/>
+        <testcase name="testShowAnErrorMessageWhenITryToLoginWithWrongCredentials" class="StanDev\Laraplate\Tests\LoginTest" classname="StanDev.Laraplate.Tests.LoginTest" file="/home/stanmenten/development/playground/laraplate/tests/LoginTest.php" line="24" assertions="7" time="0.012225"/>
+        <testcase name="testRedirectIfNotLoggedIn" class="StanDev\Laraplate\Tests\LoginTest" classname="StanDev.Laraplate.Tests.LoginTest" file="/home/stanmenten/development/playground/laraplate/tests/LoginTest.php" line="45" assertions="5" time="0.007900"/>
+        <testcase name="testCanLogout" class="StanDev\Laraplate\Tests\LoginTest" classname="StanDev.Laraplate.Tests.LoginTest" file="/home/stanmenten/development/playground/laraplate/tests/LoginTest.php" line="51" assertions="3" time="0.008641">
+          <error type="InvalidArgumentException">StanDev\Laraplate\Tests\LoginTest::testCanLogout
+InvalidArgumentException: Could not find a form that has submit button [Logout].
+
+/home/stanmenten/development/playground/laraplate/vendor/laravel/browser-kit-testing/src/Concerns/InteractsWithPages.php:643
+/home/stanmenten/development/playground/laraplate/vendor/laravel/browser-kit-testing/src/Concerns/InteractsWithPages.php:623
+/home/stanmenten/development/playground/laraplate/vendor/laravel/browser-kit-testing/src/Concerns/InteractsWithPages.php:603
+/home/stanmenten/development/playground/laraplate/vendor/laravel/browser-kit-testing/src/Concerns/InteractsWithPages.php:590
+/home/stanmenten/development/playground/laraplate/tests/LoginTest.php:56</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="StanDev\Laraplate\Tests\RouteTest" file="/home/stanmenten/development/playground/laraplate/tests/RouteTest.php" tests="1" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.016915">
+        <testcase name="testGetRoutes" class="StanDev\Laraplate\Tests\RouteTest" classname="StanDev.Laraplate.Tests.RouteTest" file="/home/stanmenten/development/playground/laraplate/tests/RouteTest.php" line="15" assertions="4" time="0.016915"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

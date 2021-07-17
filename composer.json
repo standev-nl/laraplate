@@ -1,0 +1,66 @@
+{
+    "name": "standev-nl/laraplate",
+    "description": "Awesome Laravel Boilerplate",
+    "keywords": [
+        "standev-nl",
+        "laraplate"
+    ],
+    "homepage": "https://github.com/standev-nl/laraplate",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Stan Menten",
+            "email": "stan@standev.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "diglactic/laravel-breadcrumbs": "^6.1",
+        "illuminate/support": "^8.0",
+        "laravel/browser-kit-testing": "^6.2",
+        "protonemedia/laravel-form-components": "^2.5",
+        "spatie/laravel-activitylog": "^3.17",
+        "spatie/laravel-permission": "^4.0",
+        "spatie/laravel-translatable": "^4.6"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.5",
+        "laravel/sail": "^1.4",
+        "nunomaduro/collision": "^5.3",
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "files": ["src/helpers/helpers.php"],
+        "psr-4": {
+            "StanDev\\Laraplate\\": "src",
+            "StanDev\\Laraplate\\Database\\Factories\\": "database/factories"
+
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StanDev\\Laraplate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "StanDev\\Laraplate\\LaraplateServiceProvider"
+            ],
+            "aliases": {
+                "Laraplate": "StanDev\\Laraplate\\LaraplateFacade"
+            }
+        }
+    }
+}
