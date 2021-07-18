@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('includeFilesInFolder')) {
+if (!function_exists('includeFilesInFolder')) {
     /**
      * Loops through a folder and requires all PHP files
      * Searches sub-directories as well.
@@ -14,7 +14,7 @@ if (! function_exists('includeFilesInFolder')) {
             $it = new RecursiveIteratorIterator($rdi);
 
             while ($it->valid()) {
-                if (! $it->isDot() && $it->isFile() && $it->isReadable() && $it->current()->getExtension() === 'php') {
+                if (!$it->isDot() && $it->isFile() && $it->isReadable() && $it->current()->getExtension() === 'php') {
                     require $it->key();
                 }
 
@@ -26,7 +26,7 @@ if (! function_exists('includeFilesInFolder')) {
     }
 }
 
-if (! function_exists('includeRouteFiles')) {
+if (!function_exists('includeRouteFiles')) {
 
     /**
      * @param $folder
@@ -37,20 +37,21 @@ if (! function_exists('includeRouteFiles')) {
     }
 }
 
-if (! function_exists('copyright_notice')) {
+if (!function_exists('copyright_notice')) {
 
     /**
      * @param int $startyear
      * @return false|int|string
      */
-    function copyright_notice(int $startyear){
+    function copyright_notice(int $startyear)
+    {
         $currentYear = date('Y');
 
-        switch($startyear){
+        switch ($startyear) {
             case $currentYear:
                 return $currentYear;
             case $startyear < $currentYear:
-                return $startyear .' - '. $currentYear;
+                return $startyear . ' - ' . $currentYear;
             case $startyear > $currentYear:
                 return $startyear;
             default:
