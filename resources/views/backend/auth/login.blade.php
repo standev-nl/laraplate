@@ -10,7 +10,7 @@
         <x-laraplate::auth-session-status class="mb-4" :status="session('status')"/>
 
         <!-- Validation Errors -->
-        <x-laraplate::auth-validation-errors class="mb-4" :errors="$errors"/>
+{{--        <x-laraplate::auth-validation-errors class="mb-4" :errors="$errors"/>--}}
 
         <form method="POST" action="{{ route('backend.login') }}">
         @csrf
@@ -19,7 +19,7 @@
             <div>
                 <x-laraplate::label for="email" :value="__('Email')"/>
 
-                <x-laraplate::input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                <x-laraplate::input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required=""
                          autofocus/>
             </div>
 
@@ -30,7 +30,7 @@
                 <x-laraplate::input id="password" class="block mt-1 w-full"
                          type="password"
                          name="password"
-                         required autocomplete="current-password"/>
+                         required="" autocomplete="current-password"/>
             </div>
 
             <!-- Remember Me -->

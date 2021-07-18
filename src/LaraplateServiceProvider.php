@@ -12,7 +12,7 @@ class LaraplateServiceProvider extends ServiceProvider
     public function boot()
     {
         /*
-         * Optional methods to load your package assets
+         * Optional methods to load your package laraplate
          */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laraplate');
          $this->loadViewsFrom(__DIR__.'/../resources/views', 'laraplate');
@@ -22,17 +22,17 @@ class LaraplateServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('laraplate.php'),
-            ], 'config');
+            ], 'laraplate-config');
 
             // Publishing the views.
             $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/laraplate'),
-            ], 'views');
+            ], 'laraplate-views');
 
-            // Publishing assets.
+            // Publishing laraplate.
             $this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/laraplate'),
-            ], 'assets');
+                __DIR__ . '/../resources/laraplate' => public_path(''),
+            ], 'laraplate-laraplate');
 
             // Publishing migrations
             $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
