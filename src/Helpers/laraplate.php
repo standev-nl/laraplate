@@ -60,3 +60,14 @@ if (!function_exists('copyright_notice')) {
     }
 
 }
+
+if (!function_exists('laraplate_asset')) {
+    /**
+     * @param $path
+     * @return string
+     */
+    function laraplate_asset($path)
+    {
+        return route('laraplate_assets').'?path='.urlencode($path);
+    }
+}

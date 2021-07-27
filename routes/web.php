@@ -30,6 +30,8 @@ Route::as('backend.')->prefix('admin')->group(function () {
     includeRouteFiles(__DIR__ . '/backend/');
 });
 
+Route::get('laraplate-assets', [])->name('laraplate_assets');
+
 
 // @TODO: Fix redirect if user is not signed in.
 Route::get('/', function (){
