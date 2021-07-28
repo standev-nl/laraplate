@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/laraplate.css') }}">
+    <link rel="stylesheet" href="{{ asset('laraplate/css/laraplate.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/laraplate.js') }}" defer></script>
+    <script src="{{ asset('laraplate/js/laraplate.js') }}" defer></script>
 </head>
 <body>
 <div class="font-sans text-gray-900 antialiased">

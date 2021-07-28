@@ -19,21 +19,21 @@
 /**
  * Include front-end routing
  */
-Route::as('frontend.')->group(function () {
-    includeRouteFiles(__DIR__ . '/frontend/');
-});
+//Route::as('frontend.')->group(function () {
+//    includeRouteFiles(__DIR__ . '/frontend/');
+//});
 
 /**
  * Include back-end routing
  */
-Route::as('backend.')->prefix('admin')->group(function () {
-    includeRouteFiles(__DIR__ . '/backend/');
-});
+//Route::as('backend.')->prefix('admin')->group(function () {
+//    includeRouteFiles(__DIR__ . '/backend/');
+//});
 
-Route::get('laraplate-assets', [])->name('laraplate_assets');
+//Route::get('laraplate-assets', [])->name('laraplate_assets');
 
 
-// @TODO: Fix redirect if user is not signed in.
-Route::get('/', function (){
-    return redirect()->route('backend.login');
-})->name('login');
+//// @TODO: Fix redirect if user is not signed in.
+//Route::get('/', function (){
+//    return redirect()->route('backend.login');
+//})->name('login');

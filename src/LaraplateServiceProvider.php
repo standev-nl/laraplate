@@ -31,8 +31,8 @@ class LaraplateServiceProvider extends ServiceProvider
 
             // Publishing laraplate.
             $this->publishes([
-                __DIR__ . '/../resources/laraplate' => public_path(''),
-            ], 'laraplate-laraplate');
+                __DIR__ . '/../resources/laraplate' => resource_path('laraplate'),
+            ], 'laraplate-assets');
 
             // Publishing migrations
             $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');

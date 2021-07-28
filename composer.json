@@ -34,7 +34,7 @@
     },
     "autoload": {
         "files": [
-            "src/Helpers/laraplate.php"
+            "src/helpers/helpers.php"
         ],
         "psr-4": {
             "StanDev\\Laraplate\\": "src",
